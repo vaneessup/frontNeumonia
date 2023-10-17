@@ -1,0 +1,36 @@
+<div>
+  <p>
+    <mat-toolbar>
+      <span>Detector de Neumonía</span>
+      <img class="medicina" src="assets/medicina.png" alt="Mi Imagen">
+    </mat-toolbar>
+  </p>
+  
+  <div>
+    <h1 class="title"><strong>Detección de Neumonía</strong> </h1>
+      <div class="imgStyle" *ngIf="selectedFile">
+        <h4>Imagen seleccionada:</h4>
+        <div class="container">
+          <img class="largeimg" [src]="getImageDataUrl(selectedFile)" alt="Imagen seleccionada">
+        </div>      
+      </div>
+  </div>
+  
+  <div class="row">      
+    <div class="col card">  
+      <form method="post" enctype="multipart/form-data" action="{% url 'cargar_imagen' %}">
+        <label class="custom-file-upload">
+          <input type="file" (change)="onFileSelected($event)" style="display: none;">
+          <div class="btn btn-outline-primary">Seleccionar archivo</div>
+        </label>    
+        <button class="btn btn-outline-primary" type="submit">Analizar Imagen</button>  
+        <button class="btn btn-outline-primary deleted" onclick="deletedFile()" >Eliminar Imagen</button>       
+      </form>
+    </div>
+    <div class="col">
+      <h1 class="title">Resultado</h1>
+      <p class="subtitle fail">La persona no tiene neumonía</p>
+    </div>
+  </div>
+</div>
+
