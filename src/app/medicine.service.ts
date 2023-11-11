@@ -8,10 +8,9 @@ import { Observable } from 'rxjs';
 export class MedicineService {
 
   constructor(private http: HttpClient) { }
-
   public getData(formData: FormData): Observable<any> {
     
-    return this.http.post('', formData);
+    return this.http.post('http://127.0.0.1:8000/deteccion_neumonia/', formData);
 
   }
 }
