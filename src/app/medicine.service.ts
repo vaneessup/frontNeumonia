@@ -9,9 +9,9 @@ export class MedicineService {
 
   constructor(private http: HttpClient) { }
 
-  public getData(imagen: File): Observable<any> {
+  public getData(formData: FormData): Observable<any> {
     
-    return this.http.post('', imagen);
+    return this.http.post('', formData);
 
   }
 }

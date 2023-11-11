@@ -22,15 +22,19 @@
   margin-top: 200px;
   margin-bottom: 35px;
   text-align: center;
+  margin-left: 40px;
+
 }
 
 .btn-outline-primary {
   color: #0d6efd;
   border-color: #0d6efd;
+  width: 250px;
 
   &.deleted {
-      color: green;
-      border-color: green;
+      color: red;
+      border-color: red;
+      width: 250px;
   }
 }
 
@@ -59,6 +63,42 @@
   }
 }
 
+.imgStyle1{
+  height: 60px;
+  //text-align: center;
+  margin-left: 25px;
+  .largeimg{
+    height: 160px;
+  }
+}
+
+.imgStyle2{
+  height: 60px;
+  //text-align: center;
+ margin-left: 60px;
+  .largeimg{
+    height: 160px;
+  }
+}
+
+.imgStyle3{
+  height: 60px;
+  //text-align: center;
+  margin-left: 75px;
+  .largeimg{
+    height: 180px;
+  }
+}
+
+.imgStyle4{
+  height: 60px;
+  //text-align: center;
+  margin-left: 100px;
+  .largeimg{
+    height: 180px;
+  }
+}
+
 /* Establece el color de texto y fondo para ocultar el texto "Ningún archivo seleccionado" */
 input[type="file"] {
   color: transparent;
@@ -83,8 +123,8 @@ input[type="file"] {
   display: inline-block;
   cursor: pointer;
   background-color: transparent;
-  border: 1px solid #dc3545; /* Estilo de borde */
-  color: #dc3545; /* Color del texto */
+  border: 1px solid green; /* Estilo de borde */
+  color: green; /* Color del texto */
   padding: 0.375rem 0.75rem;
   border-radius: 0.25rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
@@ -92,9 +132,9 @@ input[type="file"] {
 
 /* Cambiar estilo del botón cuando el input se enfoca */
 .custom-file-upload input[type="file"]:focus + .btn {
-  background-color: #dc3545; /* Cambiar color de fondo en enfoque */
+  background-color: green; /* Cambiar color de fondo en enfoque */
   color: #fff; /* Cambiar color de texto en enfoque */
-  border-color: #dc3545; /* Cambiar borde en enfoque */
+  border-color: green; /* Cambiar borde en enfoque */
 }
 
 mat-toolbar{
